@@ -4,16 +4,22 @@ class Program
 {
     static void Main()
     {
-        Console.WriteLine("Ingrese un número entero positivo para sumar los primeros N números:");
-        int N = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Números pares del 1 al 100:");
+        ImprimirNumerosPares(1);
+    }
 
-        int suma = 0;
+    static void ImprimirNumerosPares(int numero)
+    {
+        // Base case: cuando el número es mayor que 100, termina la recursión
+        if (numero > 100)
+            return;
 
-        for (int i = 1; i <= N; i++)
-        {
-            suma += i;
-        }
+        // Si el número es par, imprímelo
+        if (numero % 2 == 0)
+            Console.WriteLine(numero);
 
-        Console.WriteLine("La suma de los primeros " + N + " números es: " + suma);
+        // Llamada recursiva con el siguiente número
+        ImprimirNumerosPares(numero + 1);
     }
 }
+
