@@ -27,4 +27,3 @@ class Program
         ImprimirPiramideInvertida(n, fila + 1);
     }
 }
-
